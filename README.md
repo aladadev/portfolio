@@ -4,7 +4,7 @@ This project is a static personal portfolio built with Next.js 14 App Router, Ty
 
 ## How To Run Locally
 
-1. Open a terminal in `/portfolio`.
+1. Open a terminal in the repository root.
 2. Install dependencies with `npm install`.
 3. Start the development server with `npm run dev`.
 4. Open `http://localhost:3000`.
@@ -22,21 +22,20 @@ Because the cards and pages render from the same array, adding one object update
 
 1. Push the repository to GitHub.
 2. Ensure your default branch is `main`.
-3. Keep the portfolio app inside the `portfolio` directory so the workflow paths stay valid.
-4. Commit and push your changes to `main`.
-5. GitHub Actions runs `.github/workflows/deploy.yml` on every push.
-6. The workflow installs dependencies, builds a static export, and publishes `/portfolio/out` to the `gh-pages` branch.
-7. In GitHub repository settings, open `Pages`.
-8. Set the source to `Deploy from a branch`.
-9. Choose the `gh-pages` branch and the `/ (root)` folder.
-10. Save the settings and wait for the site URL to appear.
+3. Commit and push your changes to `main`.
+4. GitHub Actions runs `.github/workflows/deploy.yml` on every push.
+5. The workflow installs dependencies from the repository root, builds a static export, and publishes `/out` to the `gh-pages` branch.
+6. In GitHub repository settings, open `Pages`.
+7. Set the source to `Deploy from a branch`.
+8. Choose the `gh-pages` branch and the `/ (root)` folder.
+9. Save the settings and wait for the site URL to appear.
 
 The workflow automatically derives `NEXT_PUBLIC_BASE_PATH` so the site works for both `username.github.io` repositories and project repositories.
 
 ## Folder Structure Explanation
 
 ```text
-/portfolio
+/
   /app
     layout.tsx
     page.tsx
